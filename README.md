@@ -40,6 +40,10 @@ Creates an `index.html` and JavaScript file in `build` directory.
 npm run prod
 ```
 
+**Client Config**
+Put your site URL name in the `client-config.js`;
+const siteUrl = 'https://yourWordPressSite.com';
+
 **Linting & Formatting**
 
 The following command will fix most errors and show and remaining ones which cannot be fixed automatically.
