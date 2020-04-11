@@ -5,6 +5,9 @@ A React theme for WordPress, using Decoupled Architecture.
 Front end in React.
 Backend in WordPress.
 
+## Live Demo
+[Live Demo](react-wordpress-theme.netlify.com)
+
 ## Maintainer
 
 | Name                                                   | Github Username |
