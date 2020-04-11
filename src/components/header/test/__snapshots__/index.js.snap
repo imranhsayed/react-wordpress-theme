@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Header Component Should match Header snapshot and render correctly 1`] = `
+<h1>
+  Header
+</h1>
+`;

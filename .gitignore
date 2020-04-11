@@ -1,0 +1,26 @@
+# node/bower and dependency directories
+node_modules
+bower_components
+.sass-cache
+.jest-coverage
+
+# Ignore temporary OS files
+*.log
+npm-debug.log
+yarn-error.log
+.DS_Store
+.Spotlight-V100
+.Trashes
+debug.log
+Thumbs.db
+
+# Code Editor files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Other files and folders
+*.map
+.cache
+.env
