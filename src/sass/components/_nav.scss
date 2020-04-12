@@ -8,21 +8,35 @@
 		align-items: center;
 	}
 
+	// Submenu
+	.header-nav__submenu {
+		display: none;
+		position: absolute;
+		top: 28px;
+		left: 0;
+		padding: 10px;
+		width: 200px;
+		border: 1px solid #ddd;
+		box-shadow: 2px 2px 2px #f8f8f8;
+		& > li {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
 	// Main menu
 	.header-nav__menu-item {
 		padding: 4px 16px;
 		color: #757575;
+		position: relative;
 
 		&:last-child {
 			border: 2px solid $color__menu-border;
 			border-radius: 45px;
 		}
-	}
 
-	// Submenu
-	.header-nav__submenu {
-		.header-nav__submenu-item {
-			display: none;
+		&:hover .header-nav__submenu{
+			display: block;
 		}
 	}
 }
