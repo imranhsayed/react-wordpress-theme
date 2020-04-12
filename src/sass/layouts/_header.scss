@@ -1,0 +1,22 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo-section {
+	display: flex;
+
+	.site-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.site-title {
+		font-size: 18px;
+		font-weight: 800;
+	}
+
+	.site-description {
+	}
+}

@@ -39,9 +39,9 @@ const Layout = ( props ) => {
 
 	return (
 		<div>
-			<Header headerData={ { data, loading, error } }/>
+			{ null !== data ? <Header headerData={ { data, loading, error } }/> : '' }
 			{ props.children }
-			<Footer footerData={ { data, loading, error } }/>
+			{ null !== data ? <Footer footerData={ { data, loading, error } }/> : '' }
 		</div>
 	)
 
