@@ -1,5 +1,28 @@
 .header-nav {
+
+	display: flex;
+	align-items: center;
+
 	.header-nav__wrap {
 		display: flex;
+		align-items: center;
+	}
+
+	// Main menu
+	.header-nav__menu-item {
+		padding: 4px 16px;
+		color: #757575;
+
+		&:last-child {
+			border: 2px solid $color__menu-border;
+			border-radius: 45px;
+		}
+	}
+
+	// Submenu
+	.header-nav__submenu {
+		.header-nav__submenu-item {
+			display: none;
+		}
 	}
 }

@@ -51,7 +51,7 @@ const Header = ( props ) => {
 					<ul className="header-nav__wrap">
 						{ headerMenuItems.map( ( menu ) => {
 							return (
-								<li key={ menu.ID } className="header-nav__menu-iten">
+								<li key={ menu.ID } className="header-nav__menu-item">
 									{ menu.title }
 									{ menu.children.length ? (
 										<ul className="header-nav__submenu">
