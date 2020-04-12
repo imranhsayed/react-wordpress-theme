@@ -7,14 +7,14 @@
 /**
  * Internal Dependencies.
  */
-import Header from './components/header';
 import './style.scss';
+import Home from "./components/pages/Home";
 
 class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header />
+				<Home/>
 			</div>
 		);
 	}
