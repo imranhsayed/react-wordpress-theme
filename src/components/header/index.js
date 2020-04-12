@@ -19,7 +19,7 @@ const Header = ( props ) => {
 
 
 	return (
-		<div className="header">
+		<div className="header wrapper">
 			<Helmet>
 				<title>
 					{ siteTitle ? siteTitle : config.siteTitle }
@@ -48,7 +48,19 @@ const Header = ( props ) => {
 			</div>
 			<nav className="header-nav">
 				{ Object.keys( headerMenuItems ).length ? (
-					<ul>
+					<ul className="header-nav__wrap">
+						{ headerMenuItems.map( ( menu ) => {
+							return (
+								<li key={ menu.ID }>
+									{ menu.title }
+									{ menu.children.length ? (
+										<ul>
+											{ menu.children.map( subMenu => ( <li key={ subMenu.ID }>{ subMenu.title }</li> ) ) }
+										</ul>
+									) : '' }
+								</li>
+							)
+						} ) }
 					</ul>
 				) : '' }
 			</nav>

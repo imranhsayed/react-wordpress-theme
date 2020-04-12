@@ -5,6 +5,9 @@
 @import "base/reset";
 @import "base/normalise";
 
+/* General */
+@import "general/general";
+
 /* Variables */
 @import "abstracts/variables";
 
@@ -13,6 +16,7 @@
 
 /* Components */
 @import "components/buttons";
+@import "components/nav";
 
 /* Layouts */
 @import "layouts/header";
