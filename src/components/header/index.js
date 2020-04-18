@@ -6,7 +6,6 @@
 
 import { Helmet } from 'react-helmet';
 import config from "../../../client-config";
-import { useState, useEffect } from 'react';
 import Nav from "./nav";
 
 /**
@@ -31,7 +30,7 @@ const Header = ( props ) => {
 
 				{/*Site logo*/ }
 				{ siteLogoUrl ?
-					<img className="site-logo" width="50" height="50" src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
+					<a href=""><img className="site-logo" width="50" height="50" src={ siteLogoUrl } alt="Site Logo URL"/></a> : '' }
 
 				<div className="site-info">
 

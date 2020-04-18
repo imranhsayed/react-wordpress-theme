@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/imranhsayed/react-wordpress-theme#readme",
   "dependencies": {
+    "@reach/router": "^1.3.3",
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -8,8 +8,6 @@ const Nav = ( props ) => {
 	const [ menuVisible, setMenuVisibility] = useState( false );
 	const [ menuState, setMenuState] = useState( {} );
 
-	console.warn( 'menu', menuState );
-
 	useEffect( () => {
 		if ( Object.keys( headerMenuItems ).length ) {
 
@@ -23,6 +21,16 @@ const Nav = ( props ) => {
 		}
 	}, [] );
 
+	const handleSubMenuOpen = ( event, parentMenuId ) => {
+
+		event.stopPropagation();
+
+		setMenuState( {
+			...menuState,
+			[ parentMenuId ]: { isOpen: ! menuState[ parentMenuId ].isOpen }
+		} );
+	};
+
 	return (
 		<>
 			<nav className={ `header-nav ${ menuVisible ? 'menu-visible' : 'menu-hidden' }` }>
@@ -32,12 +40,14 @@ const Nav = ( props ) => {
 							return (
 								<li key={ menu.ID }
 								    className={ `header-nav__menu-item ${ menu.children.length ? 'menu-has-children' : '' } ${ menuState[ menu.ID ].isOpen ? 'child-menu-open' : '' }` }
-								    onClick={ () => setMenuState( {
-									    ...menuState,
-									    [ menu.ID ]: { isOpen: !menuState[ menu.ID ].isOpen }
-								    } ) }
 								>
+									{/* Parent Menu */}
 									<a className="header-nav__menu-link" href="#">{ menu.title }</a>
+
+									{/* Open Menu Button */}
+									<span className="header-nav__toggle-menu-btn" onClick={ ( event ) => handleSubMenuOpen( event, menu.ID ) }></span>
+
+									{/* Child Menu */}
 									{ menu.children.length ? (
 										<ul className={ `header-nav__submenu ${ menuState[ menu.ID ].isOpen ? 'child-menu-open' : '' }` }>
 											{ menu.children.map( subMenu => (

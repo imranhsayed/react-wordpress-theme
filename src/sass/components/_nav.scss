@@ -47,7 +47,7 @@
 		border: 1px solid $color__border;
 		transition: 0.3s;
 
-		&.menu-has-children::after {
+		&.menu-has-children .header-nav__toggle-menu-btn::after {
 			content: "+";
 			position: absolute;
 			right: 10px;
@@ -63,7 +63,7 @@
 			}
 		}
 
-		&.child-menu-open:after {
+		&.child-menu-open .header-nav__toggle-menu-btn::after {
 			content: "-";
 		}
 
@@ -108,18 +108,34 @@
 
 	// Submenu
 	.header-nav__submenu {
-		//display: none;
-		padding: 10px;
-		border: 1px solid $color__border;
-		box-shadow: 2px 2px 2px $color__box-shadow;
 		background-color: $white;
 		z-index: 1;
+		padding-left: 10px;
+
+		// For slide down effect in mobile
+		overflow: hidden;
+		max-height: 0;
+		-webkit-transition: max-height 500ms ease;
+		-moz-transition: max-height 500ms ease;
+		-o-transition: max-height 500ms ease;
+		transition: max-height 500ms ease;
+
+		// When the submenu is open.
+		&.child-menu-open {
+			max-height: 150px;
+		}
 
 		@media only screen and ( min-width: $desktop ) {
 			position: absolute;
+			display: none;
 			top: 28px;
 			left: 0;
 			width: 200px;
+			border: 1px solid $color__border;
+			box-shadow: 2px 2px 2px $color__box-shadow;
+			padding: 10px;
+			overflow: visible;
+			max-height: 300px;
 		}
 
 		& > li {
@@ -130,7 +146,7 @@
 		// Submenu Menu link
 		.header-nav__submenu-link {
 			display: block;
-			padding: 10px;
+			padding: 5px;
 
 			@media only screen and ( min-width: $desktop ) {
 				display: inline-block;
