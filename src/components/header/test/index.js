@@ -16,7 +16,6 @@ import Header from '../index';
 
 describe( 'Test Header Component', () => {
 	it( 'Should match Header snapshot and render correctly', () => {
-
 		const headerData = {
 			data: {
 				header: {
@@ -29,9 +28,11 @@ describe( 'Test Header Component', () => {
 			},
 			loading: false,
 			errorMsg: '',
-		}
+		};
 
-		const component = renderer.create( <Header headerData={ headerData }/> );
+		const component = renderer.create(
+			<Header headerData={ headerData } />
+		);
 
 		const tree = component.toJSON();
 

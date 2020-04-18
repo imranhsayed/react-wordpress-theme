@@ -1,4 +1,4 @@
-# React App Boilerplate
+# React WordPress Theme 🎨
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 A React theme for WordPress, using Decoupled Architecture.
@@ -13,6 +13,34 @@ Backend in WordPress.
 | Name                                                   | Github Username |
 |--------------------------------------------------------|-----------------|
 | [Imran Sayed](mailto:codeytek.academy@gmail.com)       |  @imranhsayed   |
+
+## Usage
+
+1. Clone the WordPress plugin [REST API endpoints](https://github.com/imranhsayed/rest-api-endpoints) in your WordPress
+plugin directory and activate it.
+
+2. The REST API endpoints, registers custom endpoints and also registers two menus. So please create two menus
+`Header Menu` and `Footer Menu` and select their respective menu location as `Travel Header Menu` and `Travel Footer Menu`
+as shown in the picture.
+
+- Set Header menu as `Travel Header Menu`
+
+![](demos/header-menu.png)
+
+- Set Footer menu as `Travel Footer Menu`
+![](demos/footer-menu.png)
+
+3. Set the siteLogo in `client-config.js`
+
+```javascript
+const config = {
+	siteURL: 'https://wordpressSite.com',
+	headerMenuLocation: 'travel-menu-header', // Change this menu location name to another, if you would like a different menu to be used for header. 
+	footerMenuLocation: 'travel-menu-footer', // Change this menu location name to another, if you would like a different menu to be used for footer.
+	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
+	siteDescription: 'Awesome theme', // Will be used if we don't set site description from WordPress customizer.
+};
+```
 
 ## Development
 
@@ -62,6 +90,18 @@ Format code with prettier
 
 ```bash
 npm run format-js
+```
+
+Run test
+
+```bash
+npm run test
+```
+
+Update test
+
+```bash
+npm run test:update
 ```
 
 **precommit**

@@ -7,7 +7,7 @@
 	right: -100vw;
 	transition: 0.3s all;
 	background-color: $white;
-	height: calc( 100vh - 80px );
+	height: calc(100vh - 80px);
 	border-top: 1px solid $color__border;
 	width: 100vw;
 	z-index: 1;
@@ -15,7 +15,6 @@
 	&.menu-visible {
 		right: 0;
 	}
-
 
 	@media only screen and ( min-width: $desktop ) {
 		align-items: center;
@@ -90,7 +89,7 @@
 			}
 		}
 
-		&:hover .header-nav__submenu{
+		&:hover .header-nav__submenu {
 			display: block;
 		}
 
