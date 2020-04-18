@@ -6,7 +6,7 @@ Front end in React.
 Backend in WordPress.
 
 ## Live Demo
-[Live Demo](react-wordpress-theme.netlify.com)
+[Live Demo](https://react-wordpress-theme.netlify.app/)
 
 ## Maintainer
 
