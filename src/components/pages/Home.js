@@ -1,11 +1,7 @@
-import Layout from "../layouts/layout";
+import Layout from '../layouts/layout';
 
 const Home = () => {
-	return (
-		<Layout>
-			Content
-		</Layout>
-	)
+	return <Layout>Content</Layout>;
 };
 
 export default Home;

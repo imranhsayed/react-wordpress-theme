@@ -1,21 +1,24 @@
 /**
  * App Component.
  *
- * @package react-wordpress-theme
+ * @package
  */
 
 /**
  * Internal Dependencies.
  */
 import './style.scss';
-import Home from "./components/pages/Home";
+import Home from './components/pages/Home';
+import { Router } from '@reach/router';
+import Page from "./components/pages/Page";
 
 class App extends React.Component {
 	render() {
 		return (
-			<div>
-				<Home/>
-			</div>
+			<Router>
+				<Home path="/" />
+				<Page path="/:userId" />
+			</Router>
 		);
 	}
 }

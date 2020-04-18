@@ -1,7 +1,7 @@
 /**
  * Test for header component.
  *
- * @package react-wordpress-theme
+ * @package
  */
 
 /**
