@@ -8,7 +8,7 @@
 	transition: 0.3s all;
 	background-color: $white;
 	height: calc( 100vh - 80px );
-	border-top: 1px solid $color--border-fieldset;
+	border-top: 1px solid $color__border;
 	width: 100vw;
 	z-index: 1;
 
@@ -19,16 +19,69 @@
 
 	@media only screen and ( min-width: $desktop ) {
 		align-items: center;
+		justify-content: flex-end;
 		display: flex;
+		position: static;
+		top: 0;
+		height: auto;
+		border: none;
 	}
 
 	.header-nav__wrap {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 
 		@media only screen and ( min-width: $desktop ) {
 			flex-direction: row;
 			align-items: center;
+			width: auto;
+		}
+	}
+
+	// Main menu list
+	.header-nav__menu-item {
+		padding: 4px 16px;
+		color: #757575;
+		position: relative;
+		border: 1px solid $color__border;
+
+		@media only screen and ( min-width: $desktop ) {
+			border: none;
+		}
+
+		&:last-child {
+			border: 2px solid $color__menu-border;
+			border-radius: 45px;
+			width: 100px;
+			text-align: center;
+			vertical-align: middle;
+			margin: 16px 0 0 16px;
+
+			@media only screen and ( min-width: $desktop ) {
+				margin: 0;
+			}
+
+			a {
+				padding: 4px 0;
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		&:hover .header-nav__submenu{
+			display: block;
+		}
+
+		// Main Menu link
+		.header-nav__menu-link {
+			display: flex;
+			padding: 10px;
+
+			@media only screen and ( min-width: $desktop ) {
+				display: inline-block;
+				padding: 0;
+			}
 		}
 	}
 
@@ -42,25 +95,21 @@
 		width: 200px;
 		border: 1px solid #ddd;
 		box-shadow: 2px 2px 2px #f8f8f8;
+
 		& > li {
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
-	}
 
-	// Main menu
-	.header-nav__menu-item {
-		padding: 4px 16px;
-		color: #757575;
-		position: relative;
-
-		&:last-child {
-			border: 2px solid $color__menu-border;
-			border-radius: 45px;
-		}
-
-		&:hover .header-nav__submenu{
+		// Submenu Menu link
+		.header-nav__submenu-link {
 			display: block;
+			padding: 10px;
+
+			@media only screen and ( min-width: $desktop ) {
+				display: inline-block;
+				padding: 0;
+			}
 		}
 	}
 }

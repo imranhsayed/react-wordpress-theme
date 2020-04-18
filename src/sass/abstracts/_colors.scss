@@ -6,5 +6,6 @@ $white: #fff;
 
 /* Borders */
 $color__border: #eaeaea;
-$color--border-fieldset: #cbcbcb;
-$color__menu-border: #757575
+$color__secondary: #cbcbcb;
+$color--border-fieldset: $color__secondary;
+$color__menu-border: #757575;

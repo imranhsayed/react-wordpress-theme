@@ -15,10 +15,7 @@ const Header = ( props ) => {
 
 	const { headerData: { data }, loading, error }                              = props;
 	const { siteLogoUrl, siteTitle, siteDescription, favicon, headerMenuItems } = data.header;
-	const [ menuVisible, setMenuVisibility ] = useState( false );
-
-	console.warn( menuVisible );
-
+	const [menuVisible, setMenuVisibility]                                      = useState( false );
 
 	return (
 		<div className="header wrapper">
@@ -33,7 +30,7 @@ const Header = ( props ) => {
 			<div className="logo-section">
 
 				{/*Site logo*/ }
-				{ siteLogoUrl ? <img width="50"  height="50" src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
+				{ siteLogoUrl ? <img className="site-logo" width="50" height="50" src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
 
 				<div className="site-info">
 
@@ -54,10 +51,14 @@ const Header = ( props ) => {
 						{ headerMenuItems.map( ( menu ) => {
 							return (
 								<li key={ menu.ID } className="header-nav__menu-item">
-									{ menu.title }
+									<a className="header-nav__menu-link" href="#">{ menu.title }</a>
 									{ menu.children.length ? (
 										<ul className="header-nav__submenu">
-											{ menu.children.map( subMenu => ( <li className="header-nav__submenu-item" key={ subMenu.ID }>{ subMenu.title }</li> ) ) }
+											{ menu.children.map( subMenu => (
+												<li className="header-nav__submenu-item" key={ subMenu.ID }>
+													<a className="header-nav__submenu-link" href="#">{ subMenu.title }</a>
+												</li> ) )
+											}
 										</ul>
 									) : '' }
 								</li>
@@ -66,7 +67,7 @@ const Header = ( props ) => {
 					</ul>
 				) : '' }
 			</nav>
-			<span className="header-nav__menu-btn" onClick={ () => setMenuVisibility( ! menuVisible ) }>☰</span>
+			<span className="header-nav__menu-btn" onClick={ () => setMenuVisibility( !menuVisible ) }>☰</span>
 		</div>
 	);
 };

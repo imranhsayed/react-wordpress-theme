@@ -10,11 +10,21 @@
 		display: block;
 		font-size: 28px;
 		cursor: pointer;
+
+		@media only screen and ( min-width: $desktop ) {
+			display: none;
+		}
 	}
 }
 
 .logo-section {
 	display: flex;
+
+	.site-logo {
+		width: 50px;
+		height: 50px;
+		margin-right: 8px;
+	}
 
 	.site-info {
 		display: flex;
@@ -25,8 +35,10 @@
 	.site-title {
 		font-size: 18px;
 		font-weight: 800;
+		white-space: nowrap;
 	}
 
 	.site-description {
+		white-space: nowrap;
 	}
 }
