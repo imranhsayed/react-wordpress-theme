@@ -46,7 +46,7 @@ module.exports = {
 					}
 				}]
 			}
-		]
+		],
 	},
 	plugins: [
 		new HtmlWebPackPlugin( {

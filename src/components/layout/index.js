@@ -1,5 +1,5 @@
 import Header from '../header';
-import Footer from '../footer/footer';
+import Footer from '../footer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from '../../../client-config';

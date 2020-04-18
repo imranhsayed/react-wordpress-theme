@@ -4,25 +4,26 @@ import axios from 'axios';
 import config from '../../../../client-config';
 
 const Index = ( props ) => {
-
 	// Page slug available in the URL.
 	const { pageSlug } = props;
 
+	/* eslint-disable no-unused-vars */
 	const [ data, setData ] = useState( null );
 	const [ loading, setLoading ] = useState( false );
 	const [ errorMsg, setError ] = useState( null );
+	/* eslint-enable */
 
 	useEffect( () => {
 		setLoading( true );
 
 		axios
 			.get(
-				`${ config.siteURL }/wp-json/wp/v2/paes?_embed&slug=${pageSlug}`
+				`${ config.siteURL }/wp-json/wp/v2/paes?_embed&slug=${ pageSlug }`
 			)
 			.then( ( response ) => {
 				// Handle success.
 				if ( 200 === response.status ) {
-					setData( response.data[0] );
+					setData( response.data[ 0 ] );
 				}
 
 				setLoading( false );

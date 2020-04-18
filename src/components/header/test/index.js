@@ -16,7 +16,22 @@ import Header from '../index';
 
 describe( 'Test Header Component', () => {
 	it( 'Should match Header snapshot and render correctly', () => {
-		const component = renderer.create( <Header /> );
+
+		const headerData = {
+			data: {
+				header: {
+					siteLogoUrl: '',
+					siteTitle: '',
+					siteDescription: '',
+					favicon: '',
+					headerMenuItems: '',
+				},
+			},
+			loading: false,
+			errorMsg: '',
+		}
+
+		const component = renderer.create( <Header headerData={ headerData }/> );
 
 		const tree = component.toJSON();
 

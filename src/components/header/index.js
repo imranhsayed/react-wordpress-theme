@@ -16,10 +16,10 @@ import { Link } from '@reach/router';
  */
 const Header = ( props ) => {
 	const {
-		headerData: { data },
+		data,
 		loading,
 		errorMsg,
-	} = props;
+	} = props.headerData;
 
 	const {
 		siteLogoUrl,

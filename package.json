@@ -66,16 +66,28 @@
     "stylelint": "^13.3.0",
     "stylelint-config-wordpress": "^16.0.0",
     "stylelint-webpack-plugin": "^1.2.3",
+    "url-loader": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
   "jest": {
     "testMatch": [
-      "**/test/**/*.[jt]s?(x)"
+      "**/test/**/*.[jt]s?(x)",
+      "**/test/**/**/*.[jt]s?(x)"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
+      "^[./a-zA-Z0-9$_-]+\\.png$": "<rootDir>/RelativeImageStub.js",
+      "module_name_(.*)": "<rootDir>/substituted_module_$1.js",
+      "assets/(.*)": [
+        "<rootDir>/images/$1",
+        "<rootDir>/photos/$1",
+        "<rootDir>/recipes/$1"
+      ]
+    }
   }
 }
