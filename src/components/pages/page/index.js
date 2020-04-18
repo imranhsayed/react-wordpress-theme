@@ -18,7 +18,7 @@ const Index = ( props ) => {
 
 		axios
 			.get(
-				`${ config.siteURL }/wp-json/wp/v2/paes?_embed&slug=${ pageSlug }`
+				`${ config.siteURL }/wp-json/wp/v2/pages?_embed&slug=${ pageSlug }`
 			)
 			.then( ( response ) => {
 				// Handle success.
