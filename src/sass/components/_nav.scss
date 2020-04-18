@@ -46,6 +46,22 @@
 		position: relative;
 		border: 1px solid $color__border;
 
+		&:after {
+			content: "+";
+			position: absolute;
+			right: 10px;
+			width: 25px;
+			text-align: center;
+			vertical-align: middle;
+			top: 10px;
+			font-size: 20px;
+			cursor: pointer;
+
+			@media only screen and ( min-width: $desktop ) {
+				content: "";
+			}
+		}
+
 		@media only screen and ( min-width: $desktop ) {
 			border: none;
 		}
@@ -87,14 +103,19 @@
 
 	// Submenu
 	.header-nav__submenu {
-		display: none;
-		position: absolute;
-		top: 28px;
-		left: 0;
+		//display: none;
 		padding: 10px;
-		width: 200px;
-		border: 1px solid #ddd;
-		box-shadow: 2px 2px 2px #f8f8f8;
+		border: 1px solid $color__border;
+		box-shadow: 2px 2px 2px $color__box-shadow;
+		background-color: $white;
+		z-index: 1;
+
+		@media only screen and ( min-width: $desktop ) {
+			position: absolute;
+			top: 28px;
+			left: 0;
+			width: 200px;
+		}
 
 		& > li {
 			padding-top: 10px;

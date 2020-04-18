@@ -6,7 +6,7 @@
 
 import { Helmet } from 'react-helmet';
 import config from "../../../client-config";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * Header
@@ -15,7 +15,23 @@ const Header = ( props ) => {
 
 	const { headerData: { data }, loading, error }                              = props;
 	const { siteLogoUrl, siteTitle, siteDescription, favicon, headerMenuItems } = data.header;
-	const [menuVisible, setMenuVisibility]                                      = useState( false );
+	const [ menuVisible, setMenuVisibility]                                      = useState( false );
+	const [ menuState, setMenuState ] = useState( {} );
+
+	useEffect( () => {
+		if ( Object.keys( headerMenuItems ).length ) {
+
+			const newMenuState = {};
+
+			headerMenuItems.map( ( item ) => {
+				newMenuState[ item.ID ] = { isOpen: false }
+			} );
+
+			setMenuState( newMenuState );
+		}
+	}, [] );
+
+	console.warn( 'menu', menuState );
 
 	return (
 		<div className="header wrapper">
@@ -50,7 +66,7 @@ const Header = ( props ) => {
 					<ul className="header-nav__wrap">
 						{ headerMenuItems.map( ( menu ) => {
 							return (
-								<li key={ menu.ID } className="header-nav__menu-item">
+								<li key={ menu.ID } className={ `header-nav__menu-item ${ menu.children.length ? 'menu-has-children' : '' }` } onClick={ () => setMenuState( { ...menuState, [menu.ID]: { isOpen: ! menuState[menu.ID].isOpen } } ) }>
 									<a className="header-nav__menu-link" href="#">{ menu.title }</a>
 									{ menu.children.length ? (
 										<ul className="header-nav__submenu">
