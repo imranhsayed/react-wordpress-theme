@@ -13,10 +13,10 @@ import { useState, useEffect } from 'react';
  */
 const Header = ( props ) => {
 
-	const { headerData: { data }, loading, error }                              = props;
+	const { headerData: { data }, loading, error } = props;
 	const { siteLogoUrl, siteTitle, siteDescription, favicon, headerMenuItems } = data.header;
-	const [ menuVisible, setMenuVisibility]                                      = useState( false );
-	const [ menuState, setMenuState ] = useState( {} );
+	const [menuVisible, setMenuVisibility] = useState( false );
+	const [menuState, setMenuState] = useState( {} );
 
 	useEffect( () => {
 		if ( Object.keys( headerMenuItems ).length ) {
@@ -46,7 +46,8 @@ const Header = ( props ) => {
 			<div className="logo-section">
 
 				{/*Site logo*/ }
-				{ siteLogoUrl ? <img className="site-logo" width="50" height="50" src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
+				{ siteLogoUrl ?
+					<img className="site-logo" width="50" height="50" src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
 
 				<div className="site-info">
 
@@ -62,17 +63,24 @@ const Header = ( props ) => {
 
 			</div>
 			<nav className={ `header-nav ${ menuVisible ? 'menu-visible' : 'menu-hidden' }` }>
-				{ Object.keys( headerMenuItems ).length ? (
+				{ Object.keys( headerMenuItems ).length && Object.keys( menuState ).length ? (
 					<ul className="header-nav__wrap">
 						{ headerMenuItems.map( ( menu ) => {
 							return (
-								<li key={ menu.ID } className={ `header-nav__menu-item ${ menu.children.length ? 'menu-has-children' : '' }` } onClick={ () => setMenuState( { ...menuState, [menu.ID]: { isOpen: ! menuState[menu.ID].isOpen } } ) }>
+								<li key={ menu.ID }
+								    className={ `header-nav__menu-item ${ menu.children.length ? 'menu-has-children' : '' } ${ menuState[ menu.ID ].isOpen ? 'child-menu-open' : '' }` }
+								    onClick={ () => setMenuState( {
+									    ...menuState,
+									    [ menu.ID ]: { isOpen: !menuState[ menu.ID ].isOpen }
+								    } ) }
+								>
 									<a className="header-nav__menu-link" href="#">{ menu.title }</a>
 									{ menu.children.length ? (
-										<ul className="header-nav__submenu">
+										<ul className={ `header-nav__submenu ${ menuState[ menu.ID ].isOpen ? 'child-menu-open' : '' }` }>
 											{ menu.children.map( subMenu => (
 												<li className="header-nav__submenu-item" key={ subMenu.ID }>
-													<a className="header-nav__submenu-link" href="#">{ subMenu.title }</a>
+													<a className="header-nav__submenu-link"
+													   href="#">{ subMenu.title }</a>
 												</li> ) )
 											}
 										</ul>

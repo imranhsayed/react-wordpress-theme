@@ -45,8 +45,9 @@
 		color: #757575;
 		position: relative;
 		border: 1px solid $color__border;
+		transition: 0.3s;
 
-		&:after {
+		&.menu-has-children::after {
 			content: "+";
 			position: absolute;
 			right: 10px;
@@ -60,6 +61,10 @@
 			@media only screen and ( min-width: $desktop ) {
 				content: "";
 			}
+		}
+
+		&.child-menu-open:after {
+			content: "-";
 		}
 
 		@media only screen and ( min-width: $desktop ) {
