@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require( 'html-webpack-plugin' );
 const path              = require( 'path' );
+const CopyPlugin        = require( 'copy-webpack-plugin' );
 
 /**
  * Webpack module exports.
@@ -20,7 +21,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js?$/,
-				exclude: /node_module/,
+				exclude: /node_modules/,
 				use: 'babel-loader',
 			},
 			{
@@ -35,7 +36,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(png|jp?g|svg)$/,
+				test: /\.(png|jp?g|svg|gif)$/,
 				use: [{
 					loader: "file-loader",
 					options: {
@@ -45,12 +46,16 @@ module.exports = {
 					}
 				}]
 			}
-		]
+		],
 	},
 	plugins: [
 		new HtmlWebPackPlugin( {
 			template: path.resolve( __dirname, 'public/index.html' ),
 			filename: 'index.html'
-		} )
+		} ),
+
+		new CopyPlugin( [
+			{ from: './src/lib', to: path.resolve( __dirname, 'build/lib' ) }
+		] ),
 	]
 };

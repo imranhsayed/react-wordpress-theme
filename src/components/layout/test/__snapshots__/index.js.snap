@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Layout Component Should match Layout snapshot and render correctly 1`] = `
+<div>
+  
+  
+</div>
+`;

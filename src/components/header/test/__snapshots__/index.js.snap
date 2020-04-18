@@ -1,7 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test Header Component Should match Header snapshot and render correctly 1`] = `
-<h1>
-  Header
-</h1>
+<div
+  className="header wrapper"
+>
+  <div
+    className="logo-section"
+  >
+    
+    <div
+      className="site-info"
+    >
+      <h1
+        className="site-title"
+      >
+        React WordPress Theme
+      </h1>
+      <p
+        className="site-description"
+      >
+        Awesome theme
+      </p>
+    </div>
+  </div>
+  <nav
+    className="header-nav menu-hidden"
+  >
+    
+  </nav>
+  <span
+    className="header-nav__menu-btn"
+    onClick={[Function]}
+  >
+    ☰
+  </span>
+</div>
 `;

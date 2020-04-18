@@ -8,8 +8,8 @@
     "prod": "webpack --mode=production",
     "eslint": "eslint ./src/*.js ./src/**/**/**/*.js ./src/**/**/**/**/*.js",
     "eslint:fix": "eslint --fix ./src/*.js ./src/**/**/**/*.js ./src/**/**/**/**/*.js",
-    "stylelint": "stylelint ./src/*.scss",
-    "stylelint:fix": "stylelint ./src/*.scss --fix",
+    "stylelint": "stylelint ./src/*.scss ./src/**/*.scss ./src/**/**/*.scss",
+    "stylelint:fix": "stylelint ./src/*.scss ./src/**/*.scss ./src/**/**/*.scss --fix",
     "format-js": "prettier .prettierrc.js --write ./src/*.js ./src/**/**/**/*.js ./src/**/**/**/**/*.js",
     "precommit": "npm run format-js && npm run eslint:fix && npm run stylelint:fix && npm run test",
     "test": "jest --verbose",
@@ -30,8 +30,11 @@
   },
   "homepage": "https://github.com/imranhsayed/react-wordpress-theme#readme",
   "dependencies": {
+    "@reach/router": "^1.3.3",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -45,11 +48,13 @@
     "babel-jest": "^25.3.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-react-require": "^3.1.3",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.5.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^4.0.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-jsdoc": "^22.1.0",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^25.3.0",
     "node-sass": "^4.13.1",
@@ -61,16 +66,22 @@
     "stylelint": "^13.3.0",
     "stylelint-config-wordpress": "^16.0.0",
     "stylelint-webpack-plugin": "^1.2.3",
+    "url-loader": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
   "jest": {
     "testMatch": [
-      "**/test/**/*.[jt]s?(x)"
+      "**/test/**/*.[jt]s?(x)",
+      "**/**/test/**/*.[jt]s?(x)"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
-    ]
+    ],
+	"moduleNameMapper": {
+	  "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+	  "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+	}
   }
 }

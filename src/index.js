@@ -1,7 +1,7 @@
 /**
  * Index file.
  *
- * @package react-wordpress-theme
+ * @package
  */
 
 /**

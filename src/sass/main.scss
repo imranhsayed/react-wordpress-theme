@@ -1,15 +1,22 @@
+/* Colors */
+@import "abstracts/colors";
+
 /* Resets */
 @import "base/reset";
 @import "base/normalise";
 
-/* Typography */
-@import "base/typography";
-
 /* Variables */
 @import "abstracts/variables";
 
+/* General */
+@import "general/general";
+
+/* Typography */
+@import "base/typography";
+
 /* Components */
 @import "components/buttons";
+@import "components/nav";
 
 /* Layouts */
 @import "layouts/header";

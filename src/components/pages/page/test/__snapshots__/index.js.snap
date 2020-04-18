@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Page Component Should match Page snapshot and render correctly 1`] = `
+<div>
+  
+  
+</div>
+`;
