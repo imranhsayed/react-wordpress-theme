@@ -8,16 +8,16 @@
  * Internal Dependencies.
  */
 import './style.scss';
-import Home from './components/pages/Home';
+import Home from './components/pages/home';
 import { Router } from '@reach/router';
-import Page from "./components/pages/Page";
+import Page from './components/pages/page';
 
 class App extends React.Component {
 	render() {
 		return (
 			<Router>
 				<Home path="/" />
-				<Page path="/:userId" />
+				<Page path="/:pageSlug" />
 			</Router>
 		);
 	}

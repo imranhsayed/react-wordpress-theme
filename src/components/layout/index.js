@@ -3,11 +3,12 @@ import Footer from '../footer/footer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from '../../../client-config';
+import Loader from './loader';
 
-const Layout = ( props ) => {
+const Index = ( props ) => {
 	const [ data, setData ] = useState( null );
 	const [ loading, setLoading ] = useState( false );
-	const [ error, setError ] = useState( null );
+	const [ errorMsg, setError ] = useState( null );
 
 	useEffect( () => {
 		setLoading( true );
@@ -16,7 +17,7 @@ const Layout = ( props ) => {
 			.get(
 				`${ config.siteURL }/wp-json/rae/v1/header-footer?header_location_id=${ config.headerMenuLocation }&footer_location_id=${ config.footerMenuLocation }`
 			)
-			.then( function( response ) {
+			.then( ( response ) => {
 				// Handle success.
 				if ( 200 === response.data.status ) {
 					setData( response.data.data );
@@ -24,7 +25,7 @@ const Layout = ( props ) => {
 
 				setLoading( false );
 			} )
-			.catch( function( error ) {
+			.catch( ( error ) => {
 				// Handle error.
 				if ( 404 === error.response.data.data.status ) {
 					setError( error.response.data.message );
@@ -37,13 +38,13 @@ const Layout = ( props ) => {
 	return (
 		<div>
 			{ null !== data ? (
-				<Header headerData={ { data, loading, error } } />
+				<Header headerData={ { data, loading, errorMsg } } />
 			) : (
 				''
 			) }
-			{ props.children }
+			{ loading ? <Loader /> : props.children }
 			{ null !== data ? (
-				<Footer footerData={ { data, loading, error } } />
+				<Footer footerData={ { data, loading, errorMsg } } />
 			) : (
 				''
 			) }
@@ -51,4 +52,4 @@ const Layout = ( props ) => {
 	);
 };
 
-export default Layout;
+export default Index;

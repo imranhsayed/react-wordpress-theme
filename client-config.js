@@ -1,5 +1,5 @@
 const config = {
-	siteURL: 'http://localhost:8888/woo-next',
+	siteURL: 'http://localhost:8888/newsletter',
 	headerMenuLocation: 'travel-menu-header',
 	footerMenuLocation: 'travel-menu-footer',
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.

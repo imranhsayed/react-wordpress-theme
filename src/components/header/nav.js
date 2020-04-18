@@ -28,8 +28,6 @@ const Nav = ( props ) => {
 		} );
 	};
 
-	console.warn( headerMenuItems );
-
 	return (
 		<>
 			<nav
@@ -41,8 +39,6 @@ const Nav = ( props ) => {
 				Object.keys( menuState ).length ? (
 					<ul className="header-nav__wrap">
 						{ headerMenuItems.map( ( menu ) => {
-
-							console.warn( 'menutit', menu.title );
 
 							return (
 								<li

@@ -18,7 +18,7 @@ const Header = ( props ) => {
 	const {
 		headerData: { data },
 		loading,
-		error,
+		errorMsg,
 	} = props;
 
 	const {
