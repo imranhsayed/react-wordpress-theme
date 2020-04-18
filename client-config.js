@@ -1,5 +1,5 @@
 const config = {
-	siteURL: 'https://codeytek.com/woo-next',
+	siteURL: 'https://codeytek.com/woo',
 	headerMenuLocation: 'travel-menu-header',
 	footerMenuLocation: 'travel-menu-footer',
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
