@@ -28,7 +28,7 @@ const Nav = ( props ) => {
 		} );
 	};
 
-	console.warn( props );
+	console.warn( headerMenuItems );
 
 	return (
 		<>
@@ -60,7 +60,7 @@ const Nav = ( props ) => {
 									{ /* Parent Menu */ }
 									<Link
 										className="header-nav__menu-link"
-										to={ `/${ menu.title.toLowerCase() }` }
+										to={ `/${ menu.pageSlug }` }
 									>
 										{ menu.title }
 									</Link>
@@ -90,7 +90,7 @@ const Nav = ( props ) => {
 													>
 														<Link
 															className="header-nav__submenu-link"
-															to={ `/${ subMenu.title.toLowerCase() }`}
+															to={ `/${ subMenu.pageSlug }`}
 														>
 															{ subMenu.title }
 														</Link>
