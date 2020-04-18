@@ -5,11 +5,11 @@
 @import "base/reset";
 @import "base/normalise";
 
-/* General */
-@import "general/general";
-
 /* Variables */
 @import "abstracts/variables";
+
+/* General */
+@import "general/general";
 
 /* Typography */
 @import "base/typography";

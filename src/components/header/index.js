@@ -6,6 +6,7 @@
 
 import { Helmet } from 'react-helmet';
 import config from "../../../client-config";
+import { useState } from 'react';
 
 /**
  * Header
@@ -14,8 +15,9 @@ const Header = ( props ) => {
 
 	const { headerData: { data }, loading, error }                              = props;
 	const { siteLogoUrl, siteTitle, siteDescription, favicon, headerMenuItems } = data.header;
+	const [ menuVisible, setMenuVisibility ] = useState( false );
 
-	console.warn( headerMenuItems );
+	console.warn( menuVisible );
 
 
 	return (
@@ -31,7 +33,7 @@ const Header = ( props ) => {
 			<div className="logo-section">
 
 				{/*Site logo*/ }
-				{ siteLogoUrl ? <img src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
+				{ siteLogoUrl ? <img width="50"  height="50" src={ siteLogoUrl } alt="Site Logo URL"/> : '' }
 
 				<div className="site-info">
 
@@ -46,7 +48,7 @@ const Header = ( props ) => {
 				</div>
 
 			</div>
-			<nav className="header-nav">
+			<nav className={ `header-nav ${ menuVisible ? 'menu-visible' : 'menu-hidden' }` }>
 				{ Object.keys( headerMenuItems ).length ? (
 					<ul className="header-nav__wrap">
 						{ headerMenuItems.map( ( menu ) => {
@@ -64,6 +66,7 @@ const Header = ( props ) => {
 					</ul>
 				) : '' }
 			</nav>
+			<span className="header-nav__menu-btn" onClick={ () => setMenuVisibility( ! menuVisible ) }>☰</span>
 		</div>
 	);
 };

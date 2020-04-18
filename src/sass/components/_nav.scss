@@ -1,11 +1,35 @@
+// Menu
 .header-nav {
 
 	display: flex;
-	align-items: center;
+	position: absolute;
+	top: 70px;
+	right: -100vw;
+	transition: 0.3s all;
+	background-color: $white;
+	height: calc( 100vh - 80px );
+	border-top: 1px solid $color--border-fieldset;
+	width: 100vw;
+	z-index: 1;
+
+	&.menu-visible {
+		right: 0;
+	}
+
+
+	@media only screen and ( min-width: $desktop ) {
+		align-items: center;
+		display: flex;
+	}
 
 	.header-nav__wrap {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+
+		@media only screen and ( min-width: $desktop ) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 
 	// Submenu
