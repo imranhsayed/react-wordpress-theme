@@ -38,8 +38,8 @@ as shown in the picture.
 ```javascript
 const config = {
 	siteURL: 'https://wordpressSite.com',
-	headerMenuLocation: 'travel-menu-header', // Change this menu location name to another, if you would like a different menu to be used for header. 
-	footerMenuLocation: 'travel-menu-footer', // Change this menu location name to another, if you would like a different menu to be used for footer.
+	headerMenuLocation: 'rwt-menu-header', // Change this menu location name to another, if you would like a different menu to be used for header. 
+	footerMenuLocation: 'rwt-menu-footer', // Change this menu location name to another, if you would like a different menu to be used for footer.
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
 	siteDescription: 'Awesome theme', // Will be used if we don't set site description from WordPress customizer.
 };

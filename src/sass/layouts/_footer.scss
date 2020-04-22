@@ -1,1 +1,15 @@
 /* Buttons style to be added*/
+.footer {
+	background: url("/images/footer-background.png");
+
+	.footer__top {
+		display: flex;
+		color: $white;
+	}
+}
+
+.footer__bottom {
+	display: flex;
+	justify-content: space-between;
+	color: $white;
+}
