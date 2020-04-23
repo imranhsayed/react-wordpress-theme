@@ -1,15 +1,46 @@
 /* Buttons style to be added*/
 .footer {
 	background: url("/images/footer-background.png");
+	background-size: cover;
 
 	.footer__top {
-		display: flex;
 		color: $white;
+		padding-top: 50px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
+}
+
+.footer__sidebar-one,
+.footer__sidebar-two,
+.footer-menu-items {
+	margin-bottom: 50px;
 }
 
 .footer__bottom {
 	display: flex;
 	justify-content: space-between;
 	color: $white;
+	margin-top: 20px;
+	padding: 0 10px 30px 10px;
+}
+
+.social-links {
+	li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+}
+
+@media only screen and (min-width: 968px) {
+	.footer__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer__sidebar-one,
+	.footer__sidebar-two,
+	.footer-menu-items {
+		flex-basis: 30%;
+	}
 }
