@@ -3,5 +3,23 @@
 exports[`Test Footer Component Should match Footer snapshot and render correctly 1`] = `
 <div
   className="footer"
-/>
+>
+  <div
+    className="wrapper"
+  >
+    <div
+      className="footer__top"
+    >
+      
+      
+      
+    </div>
+    <div
+      className="footer__bottom"
+    >
+      © 2020 CODEYTEK ACADEMY.
+      
+    </div>
+  </div>
+</div>
 `;

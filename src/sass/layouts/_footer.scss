@@ -1,1 +1,80 @@
 /* Buttons style to be added*/
+.footer {
+	background: url(/images/footer-background.png);
+	background-size: cover;
+
+	.footer__top {
+		color: $white;
+		padding-top: 50px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.footer__sidebar-one,
+.footer__sidebar-two {
+
+	> .widget:not(:last-child) {
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-weight: 800;
+		margin-bottom: 18px;
+	}
+
+	img {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+.footer__sidebar-one,
+.footer__sidebar-two,
+.footer-menu-items {
+	margin-bottom: 50px;
+}
+
+.footer-menu-items {
+	h6 {
+		margin-bottom: 18px;
+	}
+
+	ul {
+		li {
+			margin-bottom: 10px;
+		}
+		i {
+			padding-right: 2px;
+			font-size: 12px;
+		}
+	}
+}
+
+.footer__bottom {
+	display: flex;
+	justify-content: space-between;
+	color: $white;
+	margin-top: 20px;
+	padding: 0 10px 30px 10px;
+}
+
+.social-links {
+	li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+}
+
+@media only screen and ( min-width: $tablet ) {
+	.footer__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer__sidebar-one,
+	.footer__sidebar-two,
+	.footer-menu-items {
+		flex-basis: 30%;
+	}
+}

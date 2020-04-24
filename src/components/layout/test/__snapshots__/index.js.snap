@@ -3,6 +3,9 @@
 exports[`Test Layout Component Should match Layout snapshot and render correctly 1`] = `
 <div>
   
+  <div
+    className="content"
+  />
   
 </div>
 `;
