@@ -1,6 +1,6 @@
 /* Buttons style to be added*/
 .footer {
-	background: url("/images/footer-background.png");
+	background: url(/images/footer-background.png);
 	background-size: cover;
 
 	.footer__top {
@@ -12,9 +12,43 @@
 }
 
 .footer__sidebar-one,
+.footer__sidebar-two {
+
+	> .widget:not(:last-child) {
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-weight: 800;
+		margin-bottom: 18px;
+	}
+
+	img {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+.footer__sidebar-one,
 .footer__sidebar-two,
 .footer-menu-items {
 	margin-bottom: 50px;
+}
+
+.footer-menu-items {
+	h6 {
+		margin-bottom: 18px;
+	}
+
+	ul {
+		li {
+			margin-bottom: 10px;
+		}
+		i {
+			padding-right: 2px;
+			font-size: 12px;
+		}
+	}
 }
 
 .footer__bottom {
@@ -32,7 +66,7 @@
 	}
 }
 
-@media only screen and (min-width: 968px) {
+@media only screen and ( min-width: $tablet ) {
 	.footer__top {
 		display: flex;
 		justify-content: space-between;

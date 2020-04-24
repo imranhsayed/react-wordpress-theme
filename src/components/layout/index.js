@@ -42,7 +42,9 @@ const Index = ( props ) => {
 			) : (
 				''
 			) }
+			<div className="content">
 			{ loading ? <Loader /> : props.children }
+			</div>
 			{ null !== data ? (
 				<Footer footerData={ { data, loading, errorMsg } } />
 			) : (

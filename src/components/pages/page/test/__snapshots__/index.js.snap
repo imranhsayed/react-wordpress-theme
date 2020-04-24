@@ -3,6 +3,9 @@
 exports[`Test Page Component Should match Page snapshot and render correctly 1`] = `
 <div>
   
+  <div
+    className="content"
+  />
   
 </div>
 `;

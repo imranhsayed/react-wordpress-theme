@@ -3,7 +3,9 @@
 exports[`Test Home Component Should match Home snapshot and render correctly 1`] = `
 <div>
   
-  Content
+  <div
+    className="content"
+  />
   
 </div>
 `;

@@ -9,3 +9,7 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+
+.content {
+	min-height: calc(100vh - 74px - 100px);
+}

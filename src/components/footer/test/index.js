@@ -16,8 +16,7 @@ import Footer from '../index';
 
 describe( 'Test Footer Component', () => {
 	it( 'Should match Footer snapshot and render correctly', () => {
-
-		const data= {
+		const data = {
 			footer: {
 				copyrightText: '',
 				footerMenuItems: '',
@@ -29,8 +28,9 @@ describe( 'Test Footer Component', () => {
 		const loading = false;
 		const errorMsg = true;
 
-
-		const component = renderer.create( <Footer footerData={ { data, loading, errorMsg } }/> );
+		const component = renderer.create(
+			<Footer footerData={ { data, loading, errorMsg } } />
+		);
 
 		const tree = component.toJSON();
 

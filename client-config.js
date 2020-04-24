@@ -5,7 +5,7 @@ const config = {
 	footerMenuLocation: 'rwt-menu-footer',
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
 	siteDescription: 'Awesome theme', // Will be used if we don't set site description from WordPress customizer.
-	copyrightText: '© 2020 TRAVEL PVT. LTD.',
+	copyrightText: '© 2020 CODEYTEK ACADEMY.',
 	footerMenuTitle: 'About the site',
 };
 

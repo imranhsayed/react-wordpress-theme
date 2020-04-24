@@ -17,7 +17,7 @@ exports[`Test Footer Component Should match Footer snapshot and render correctly
     <div
       className="footer__bottom"
     >
-      © 2020 TRAVEL PVT. LTD.
+      © 2020 CODEYTEK ACADEMY.
       
     </div>
   </div>

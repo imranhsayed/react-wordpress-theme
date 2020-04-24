@@ -34,6 +34,7 @@ const Footer = ( props ) => {
 												className="header-nav__menu-link"
 												to={ `/${ menu.pageSlug }` }
 											>
+												<i className="fa fa-chevron-right"/>
 												{ menu.title }
 											</Link>
 										</li>
