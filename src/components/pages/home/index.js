@@ -5,6 +5,7 @@ import config from "../../../../client-config";
 import Hero from "./hero";
 import Search from "./search";
 import FeaturedPosts from "./featured-posts";
+import LatestPosts from "./latest-posts";
 import Error from "../../error";
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
 					<Hero data={ data }/>
 					<Search data={ data }/>
 					<FeaturedPosts data={ data }/>
+					<LatestPosts data={ data }/>
 				</>
 			) : <Error message={ errorMsg }/> }
 		</Layout>

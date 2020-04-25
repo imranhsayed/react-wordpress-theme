@@ -36,6 +36,9 @@ const config = {
 	},
 	featuredPostsSection: {
 		featuredPostHeading: 'Featured Posts'
+	},
+	latestPostsSection: {
+		latestPostHeading: 'Latest Posts'
 	}
 };
 
