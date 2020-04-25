@@ -4,6 +4,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	min-height: 490px;
 
 	.search-section__categories {
 
@@ -15,4 +16,35 @@
 			width: 50px;
 		}
 	}
+
+	form {
+		width: 100%;
+		text-align: center;
+	}
+	input[type="search"] {
+		width: 100%;
+		max-width: 750px;
+		background: #003D47;
+		padding: 15px 25px;
+		color: $white;
+		border: none;
+		border-radius: 50px;
+		&:focus {
+			outline: none;
+		}
+		&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: $white;
+			opacity: 1; /* Firefox */
+		}
+
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: $white;
+		}
+
+		&::-ms-input-placeholder { /* Microsoft Edge */
+			color: $white;
+		}
+	}
+
+
 }

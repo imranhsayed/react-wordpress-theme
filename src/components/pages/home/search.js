@@ -22,8 +22,8 @@ const Search = ( props ) => {
 							<div key={ term.termId } className="search-section__category">
 								{
 									term.image.img_srcset ?
-										<img src={ term.image.img_src[0] } alt={ term.name } srcSet={ term.image.img_srcset }/>
-										: <img src={ config.searchSection.images[ index ] }/>
+										<div><img src={ term.image.img_src[0] } alt={ term.name } srcSet={ term.image.img_srcset }/></div>
+										: <div><img src={ config.searchSection.images[ index ] }/></div>
 								}
 								{ term.name ? <Link to={ `/category/${term.slug}` }>{ term.name }</Link>: '' }
 							</div>

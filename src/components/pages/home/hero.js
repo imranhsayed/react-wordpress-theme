@@ -8,7 +8,7 @@ const Hero = ( props ) => {
 
 	return (
 		heroSection ? (
-			<div className="hero-section">
+			<div className="hero-section wrapper">
 				<div className="hero-left">
 					{ heroSection.heroTitle ? <h2>{ heroSection.heroTitle }</h2> : <h2>{ config.heroSection.heroTitle }</h2> }
 					{ heroSection.heroDescription ? <p>{ heroSection.heroDescription }</p> : <p>{ config.heroSection.heroDescription }</p> }

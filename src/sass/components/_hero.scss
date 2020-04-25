@@ -1,8 +1,19 @@
 .hero-section {
-
+	margin-top: 70px;
 	@media only screen and ( min-width: $tablet ) {
 		display: flex;
 		justify-content: space-between;
 	}
 
+}
+
+.hero-left {
+	max-width: 349px;
+}
+
+.hero-right {
+	img {
+		display: block;
+		margin-bottom: -5px;
+	}
 }

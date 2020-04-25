@@ -38,7 +38,23 @@ const Page = ( props ) => {
 			} );
 	}, [ pageSlug ] );
 
-	return <Layout>{ props.uri }</Layout>;
+	console.warn( 'data', data );
+
+	return (
+		<Layout>
+			{
+				null !== data ? (
+					<>
+						<section className="page-content">
+							{ data.title.rendered ? <h2>{ data.title.rendered }</h2> : '' }
+							{ data._links ? <img src={ data._links['wp:featuredmedia'].href } alt=""/> : '' }
+						</section>
+						<aside className="aside"></aside>
+					</>
+				) : ''
+			}
+		</Layout>
+	);
 };
 
 export default Page;
