@@ -1,12 +1,21 @@
 const config = {
 	// siteURL: 'https://codeytek.com/woo',
 	siteURL: 'http://localhost:8888/newsletter',
-	headerMenuLocation: 'rwt-menu-header',
-	footerMenuLocation: 'rwt-menu-footer',
+	headerMenuLocation: 'hcms-menu-header',
+	footerMenuLocation: 'hcms-menu-footer',
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
 	siteDescription: 'Awesome theme', // Will be used if we don't set site description from WordPress customizer.
 	copyrightText: '© 2020 CODEYTEK ACADEMY.',
 	footerMenuTitle: 'About the site',
+	homePagePostType: 'post', // Will be used to display 3 latest post on home page of given post type
+	homePageTaxonomy: 'category', // // Will be used to display 3 taxonomies on home page of given post type,
+	heroSection: {
+		heroTitle: 'Amazing world.',
+		heroDescription: 'Discover more than just common Landscapes. Try to live inside of the wild nature. Create your own story. Unforgettable and nonrepeating by nobody.',
+		heroImgURL: '/images/mountain-illustration.png',
+		heroBtnTxt: 'Explore My World',
+
+	}
 };
 
 export default config;

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import config from '../../../../client-config';
 
-const Index = ( props ) => {
+const Page = ( props ) => {
 	// Page slug available in the URL.
 	const { pageSlug } = props;
 
@@ -41,4 +41,4 @@ const Index = ( props ) => {
 	return <Layout>{ props.uri }</Layout>;
 };
 
-export default Index;
+export default Page;

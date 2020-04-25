@@ -1,0 +1,8 @@
+.hero-section {
+
+	@media only screen and ( min-width: $tablet ) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+}
