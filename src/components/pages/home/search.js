@@ -8,8 +8,6 @@ const Search = ( props ) => {
 	const backgroundURL = searchSection.searchBackURL ? searchSection.searchBackURL : config.searchSection.searchBackURL;
 	const placeholderText = searchSection.searchPlaceholderTxt ? searchSection.searchPlaceholderTxt : config.searchSection.searchPlaceholderTxt;
 
-	console.warn( 'he', searchSection );
-
 	return (
 		searchSection ? (
 			<div className="search-section" style={{ background: `url( ${ backgroundURL } )`, backgroundSize: 'cover' }}>

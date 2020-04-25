@@ -1,28 +1,18 @@
-import Layout from '../../layout';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import config from '../../../../client-config';
+import './../../../images/default/default.jpg';
 
-/**
- * Category page, displays the posts related to the given slug in URL.
- *
- * @param props
- * @return {*}
- * @constructor
- */
 const Category = ( props ) => {
 	// Category slug available in the URL.
 	const { slug } = props;
 
-	/* eslint-disable no-unused-vars */
 	const [ data, setData ] = useState( null );
 	const [ loading, setLoading ] = useState( false );
 	const [ errorMsg, setError ] = useState( null );
-	/* eslint-enable */
+	const isMountedRef = useRef(null);
 
-	useEffect( () => {
-		setLoading( true );
-
+	const getHomeData = () => {
 		axios
 			.get(
 				`${ config.siteURL }/wp-json/wp/v2/pages?_embed&slug=${ slug }`
@@ -30,22 +20,46 @@ const Category = ( props ) => {
 			.then( ( response ) => {
 				// Handle success.
 				if ( 200 === response.status ) {
-					setData( response.data[ 0 ] );
+
+					if ( isMountedRef.current ) {
+						setData( response.data[ 0 ] );
+					}
 				}
 
-				setLoading( false );
 			} )
 			.catch( ( error ) => {
 				// Handle error.
 				if ( 404 === error.response.data.data.status ) {
 					setError( error.response.data.message );
+					setLoading( false );
 				}
 
-				setLoading( false );
 			} );
-	}, [ slug ] );
+	}
 
-	return <Layout>{ props.uri }</Layout>;
+	useEffect( () => {
+		isMountedRef.current = true;
+		setLoading( true );
+		getHomeData();
+		return () => isMountedRef.current = false;
+	}, [] );
+
+	return (
+		<>
+			{
+				null !== data ? (
+					<>
+						<section className="page-content">
+							{/*{ data.title.rendered ? <h2>{ data.title.rendered }</h2> : '' }*/}
+							{/*{ data._embedded['wp:featuredmedia'] ? <img src={ data._embedded['wp:featuredmedia'][0].source_url } alt={ data.title.rendered }/> : <img src={ config.defaultPostImage }  alt={ data.title.rendered }/> }*/}
+							{/*{ data.content.rendered ? <div dangerouslySetInnerHTML={ { __html: data.content.rendered } }/> : '' }*/}
+						</section>
+						<aside className="aside"></aside>
+					</>
+				) : 'Loading...'
+			}
+		</>
+	);
 };
 
 export default Category;

@@ -24,7 +24,7 @@ const FeaturedPosts = ( props ) => {
 										{ post.excerpt ? <p>{ post.excerpt }</p>: '' }
 										<div className="featured-post-section__meta">
 											{ post.date ? <span>{ post.date }</span>: '' }
-											<Link to={ `/${ post.slug }` }>Read More..</Link>
+											<Link to={ `/post/${ post.slug }` }>Read More..</Link>
 										</div>
 									</div>
 
