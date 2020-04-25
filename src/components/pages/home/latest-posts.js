@@ -1,6 +1,5 @@
 import config from "../../../../client-config";
 import { Link } from '@reach/router';
-import '../../../images/default/post-default.png'
 
 const LatestPosts = ( props ) => {
 
@@ -16,7 +15,7 @@ const LatestPosts = ( props ) => {
 							<div key={ `${ post.id }-${ index }` } className="featured-post-section">
 								{ post.attachment_image.img_src ?
 									<div className="featured-post-section__img"><img src={ post.attachment_image.img_src[0] } srcSet={ post.attachment_image.img_srcset } alt={ post.title }/></div> :
-									<div className="featured-post-section__img"><img src="/images/post-default.png" alt="default"/></div> }
+									<div className="featured-post-section__img"><img src={ config.defaultPostImage } alt="default"/></div> }
 								<div className="featured-post-section__content">
 									{ post.excerpt ? <p>{ post.excerpt }</p>: '' }
 								</div>

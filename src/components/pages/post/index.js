@@ -6,6 +6,7 @@ import config from '../../../../client-config';
 const Post = ( props ) => {
 	// Post slug available in the URL.
 	const { slug } = props;
+	console.warn( 'slug', slug );
 
 	/* eslint-disable no-unused-vars */
 	const [ data, setData ] = useState( null );

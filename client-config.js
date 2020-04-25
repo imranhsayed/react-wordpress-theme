@@ -39,7 +39,8 @@ const config = {
 	},
 	latestPostsSection: {
 		latestPostHeading: 'Latest Posts'
-	}
+	},
+	defaultPostImage: '/images/default.jpg', // Used for default post or pages.
 };
 
 export default config;

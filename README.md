@@ -19,11 +19,11 @@ Backend in WordPress.
 
 ## Usage
 
-1. Clone the WordPress plugin [REST API endpoints](https://github.com/imranhsayed/rest-api-endpoints) in your WordPress
+1. Clone the WordPress plugin [Headless CMS](https://github.com/imranhsayed/headless-cms) in your WordPress
 plugin directory and activate it.
 
 2. The REST API endpoints, registers custom endpoints and also registers two menus. So please create two menus
-`Header Menu` and `Footer Menu` and select their respective menu location as `Travel Header Menu` and `Travel Footer Menu`
+`Header Menu` and `Footer Menu` and select their respective menu location as `HCMS Header Menu` and `HCMS Footer Menu`
 as shown in the picture.
 
 - Set Header menu as `Travel Header Menu`
@@ -33,17 +33,19 @@ as shown in the picture.
 - Set Footer menu as `Travel Footer Menu`
 ![](demos/footer-menu.png)
 
-3. Set the siteLogo in `client-config.js`
+3. Set the siteURL and other settings in `client-config.js`.
 
 ```javascript
 const config = {
-	siteURL: 'https://wordpressSite.com',
-	headerMenuLocation: 'rwt-menu-header', // Change this menu location name to another, if you would like a different menu to be used for header. 
-	footerMenuLocation: 'rwt-menu-footer', // Change this menu location name to another, if you would like a different menu to be used for footer.
+	siteURL: 'xxxxxx', // e.g. 'https://wordpressSite.com' 
+	headerMenuLocation: 'hcms-menu-header', // Change this menu location name to another, if you would like a different menu to be used for header. 
+	footerMenuLocation: 'hcms-menu-footer', // Change this menu location name to another, if you would like a different menu to be used for footer.
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
 	siteDescription: 'Awesome theme', // Will be used if we don't set site description from WordPress customizer.
 };
 ```
+
+More settings can be found in `client-config.js`
 
 ## Development
 
