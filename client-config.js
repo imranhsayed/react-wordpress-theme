@@ -15,6 +15,27 @@ const config = {
 		heroImgURL: '/images/mountain-illustration.png',
 		heroBtnTxt: 'Explore My World',
 
+	},
+	searchSection: {
+		searchBackURL: '/images/search-background.png',
+		searchPlaceholderTxt: '',
+		images: [
+			{
+				src: '/images/bag.png',
+				name: 'Solo'
+			},
+			{
+				src: '/images/airplane.png',
+				name: 'Flight'
+			},
+			{
+				src: '/images/group.png',
+				name: 'Group'
+			},
+		]
+	},
+	featuredPostsSection: {
+		featuredPostHeading: 'Featured Posts'
 	}
 };
 

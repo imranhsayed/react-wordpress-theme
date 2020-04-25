@@ -1,0 +1,18 @@
+.search-section {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.search-section__categories {
+
+		display: flex;
+	}
+
+	.search-section__category {
+		img {
+			width: 50px;
+		}
+	}
+}

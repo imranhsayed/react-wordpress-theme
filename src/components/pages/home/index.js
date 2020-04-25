@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 import config from "../../../../client-config";
 import Hero from "./hero";
+import Search from "./search";
+import FeaturedPosts from "./featured-posts";
 import Error from "../../error";
 
 const Home = () => {
@@ -43,6 +45,8 @@ const Home = () => {
 			{ null !== data ? (
 				<>
 					<Hero data={ data }/>
+					<Search data={ data }/>
+					<FeaturedPosts data={ data }/>
 				</>
 			) : <Error message={ errorMsg }/> }
 		</Layout>

@@ -1,12 +1,10 @@
 import config from "../../../../client-config";
 import { Link } from '@reach/router';
-import HeroImg from '../../../images/home/mountain-illustration.png';
+import '../../../images/home/mountain-illustration.png';
 
 const Hero = ( props ) => {
 
 	const { heroSection } = props.data;
-
-	console.warn( 'he', heroSection );
 
 	return (
 		heroSection ? (
