@@ -1,6 +1,5 @@
 const config = {
-	// siteURL: 'https://codeytek.com/woo',
-	siteURL: 'http://localhost:8888/newsletter',
+	siteURL: 'https://codeytek.com/woo',
 	headerMenuLocation: 'hcms-menu-header',
 	footerMenuLocation: 'hcms-menu-footer',
 	siteTitle: 'React WordPress Theme', // Will be used if we don't set site title from WordPress customizer.
