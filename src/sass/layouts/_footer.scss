@@ -9,7 +9,17 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+
+	.widget-title {
+		font-size: 22px;
+		color: $white;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: $white;
+	}
 }
+
+
 
 .footer__sidebar-one,
 .footer__sidebar-two {
@@ -47,6 +57,7 @@
 		i {
 			padding-right: 2px;
 			font-size: 12px;
+			margin-right: 5px;
 		}
 	}
 }
@@ -70,11 +81,10 @@
 	.footer__top {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
-	.footer__sidebar-one,
-	.footer__sidebar-two,
-	.footer-menu-items {
+	.footer-widget {
 		flex-basis: 30%;
 	}
 }

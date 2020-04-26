@@ -21,7 +21,7 @@
 	display: flex;
 
 	.site-logo {
-		width: 50px;
+		min-width: 50px;
 		height: 50px;
 		margin-right: 8px;
 	}
@@ -36,6 +36,7 @@
 		font-size: 18px;
 		font-weight: 800;
 		white-space: nowrap;
+		margin-bottom: 10px;
 	}
 
 	.site-description {

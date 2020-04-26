@@ -9,6 +9,7 @@ const FeaturedPosts = ( props ) => {
 	return (
 		featuredPostsSection ? (
 			<div className="featured-posts-section">
+				<div className="wrapper">
 				<h2>{ featuredPostsSection.featuredPostHeading ? featuredPostsSection.featuredPostHeading : config.featuredPostHeading }</h2>
 				{ featuredPostsSection.featuredPosts ? (
 					<div className="featured-posts-section__wrap">
@@ -21,10 +22,10 @@ const FeaturedPosts = ( props ) => {
 									</div> }
 									<div className="featured-post-section__content">
 										{ post.title ? <h3>{ post.title }</h3>: '' }
-										{ post.excerpt ? <p>{ post.excerpt }</p>: '' }
+										{ post.excerpt ? <p className="featured-post-section__content-paragraph">{ post.excerpt }</p>: '' }
 										<div className="featured-post-section__meta">
-											{ post.date ? <span>{ post.date }</span>: '' }
-											<Link to={ `/post/${ post.slug }` }>Read More..</Link>
+											{ post.date ? <span className="featured-post-section__date">{ post.date }</span>: '' }
+											<Link className="featured-post-section__read-more" to={ `/post/${ post.slug }` }>Read More</Link>
 										</div>
 									</div>
 
@@ -32,6 +33,7 @@ const FeaturedPosts = ( props ) => {
 						) ) }
 					</div>
 				): '' }
+				</div>
 			</div>
 		) : ''
 	)
