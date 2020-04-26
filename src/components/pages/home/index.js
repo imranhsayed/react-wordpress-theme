@@ -18,7 +18,7 @@ const Home = () => {
 	const getHomeData = () => {
 		axios
 			.get(
-				`${ config.siteURL }/wp-json/rae/v1/home?home?post_type=${ config.homePagePostType }&taxonomy=${ config.homePageTaxonomy }`
+				`${ config.siteURL }/wp-json/rae/v1/home?post_type=${ config.homePagePostType }&taxonomy=${ config.homePageTaxonomy }`
 			)
 			.then( ( response ) => {
 				// Handle success.

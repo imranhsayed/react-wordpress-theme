@@ -8,6 +8,8 @@ Backend in WordPress.
 ## Live Demo
 [Live Demo](https://react-wordpress-theme.netlify.app/)
 
+![](demos/home.png)
+
 ## Performance
 ![](demos/performance.png)
 
