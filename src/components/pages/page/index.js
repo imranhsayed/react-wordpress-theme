@@ -7,8 +7,6 @@ const Page = ( props ) => {
 	// Page slug available in the URL.
 	const { pageSlug } = props;
 
-	console.warn( 'page', pageSlug );
-
 	/* eslint-disable no-unused-vars */
 	const [ data, setData ] = useState( null );
 	const [ loading, setLoading ] = useState( false );
