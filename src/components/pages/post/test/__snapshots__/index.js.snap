@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Post Component Should match Post snapshot and render correctly 1`] = `"Loading..."`;

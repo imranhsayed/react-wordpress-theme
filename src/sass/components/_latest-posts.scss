@@ -13,10 +13,10 @@
 
 .latest-post-section {
 	background-color: $white;
-	box-shadow: 5px 5px 20px 0 #CBCBCB;
+	box-shadow: 5px 5px 20px 0 #cbcbcb;
 
 	@media only screen and ( max-width: $tablet ) {
-		margin-bottom: 30px
+		margin-bottom: 30px;
 	}
 
 	@media only screen and ( min-width: $tablet ) {

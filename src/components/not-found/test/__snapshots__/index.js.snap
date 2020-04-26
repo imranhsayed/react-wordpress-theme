@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test NotFound Component Should match NotFound snapshot and render correctly 1`] = `
+<div>
+  
+  <div
+    className="content"
+  >
+    <h3>
+      404
+    </h3>
+    Sorry, nothing here.
+  </div>
+  
+</div>
+`;

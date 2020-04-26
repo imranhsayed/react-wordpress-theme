@@ -11,10 +11,10 @@ import './style.scss';
 import Home from './components/pages/home';
 import { Router } from '@reach/router';
 import Page from './components/pages/page';
-import Category from "./components/pages/category";
-import Post from "./components/pages/post";
-import NotFound from "./components/not-found";
-import Layout from "./components/layout";
+import Category from './components/pages/category';
+import Post from './components/pages/post';
+import NotFound from './components/not-found';
+import Layout from './components/layout';
 
 class App extends React.Component {
 	render() {
