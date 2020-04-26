@@ -41,7 +41,7 @@ const Category = ( props ) => {
 		setLoading( true );
 		getHomeData();
 		return () => ( isMountedRef.current = false );
-	}, [] );
+	}, [ slug ] );
 
 	return (
 		<>
