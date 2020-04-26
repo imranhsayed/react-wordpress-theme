@@ -5,7 +5,7 @@ import axios from 'axios';
 import config from '../../../client-config';
 import Loader from './loader';
 
-const Index = ( props ) => {
+const Layout = ( props ) => {
 	const [ data, setData ] = useState( null );
 	const [ loading, setLoading ] = useState( false );
 	const [ errorMsg, setError ] = useState( null );
@@ -54,4 +54,4 @@ const Index = ( props ) => {
 	);
 };
 
-export default Index;
+export default Layout;

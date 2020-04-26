@@ -21,11 +21,12 @@ const Footer = ( props ) => {
 			<div className="wrapper">
 				{/*Top section*/}
 				<div className="footer__top">
-					{ sidebarOne ? <div  dangerouslySetInnerHTML={ { __html: sidebarOne } } className="footer__sidebar-one"/> : '' }
-					{ sidebarTwo ? <div  dangerouslySetInnerHTML={ { __html: sidebarTwo } } className="footer__sidebar-two"/> : '' }
+					{ sidebarOne ? <div  dangerouslySetInnerHTML={ { __html: sidebarOne } } className="footer__sidebar-one footer-widget"/> : '' }
+					{ sidebarTwo ? <div  dangerouslySetInnerHTML={ { __html: sidebarTwo } } className="footer__sidebar-two footer-widget"/> : '' }
+
 					{
 						footerMenuItems.length ? (
-							<div className="footer-menu-items">
+							<div className="footer-menu-items footer-widget">
 								{ config.footerMenuTitle ? <h6>{ config.footerMenuTitle }</h6> : '' }
 								<ul>
 									{ footerMenuItems.map( menu  => (

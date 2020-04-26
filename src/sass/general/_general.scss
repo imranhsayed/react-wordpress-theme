@@ -1,6 +1,8 @@
 .wrapper {
 	max-width: 1230px;
 	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .loader {
@@ -12,4 +14,9 @@
 
 .content {
 	min-height: calc(100vh - 74px - 100px);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }

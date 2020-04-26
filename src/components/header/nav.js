@@ -56,7 +56,7 @@ const Nav = ( props ) => {
 									{ /* Parent Menu */ }
 									<Link
 										className="header-nav__menu-link"
-										to={ `/${ menu.pageSlug }` }
+										to={ `${ menu.pageSlug }` }
 									>
 										{ menu.title }
 									</Link>
@@ -86,7 +86,7 @@ const Nav = ( props ) => {
 													>
 														<Link
 															className="header-nav__submenu-link"
-															to={ `/${ subMenu.pageSlug }`}
+															to={ `${ subMenu.pageSlug }`}
 														>
 															{ subMenu.title }
 														</Link>

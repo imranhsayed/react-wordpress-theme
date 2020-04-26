@@ -1,5 +1,5 @@
 /**
- * Test for header component.
+ * Test for footer component.
  *
  * @package
  */

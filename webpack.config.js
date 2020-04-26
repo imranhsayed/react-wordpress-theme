@@ -13,6 +13,7 @@ module.exports = {
 	output: {
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'main.js',
+		publicPath: "/",
 	},
 	devServer: {
 		historyApiFallback: true
