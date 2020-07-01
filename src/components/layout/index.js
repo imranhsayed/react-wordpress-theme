@@ -43,7 +43,7 @@ const Layout = ( props ) => {
 				''
 			) }
 			<div className="content">
-				{ loading ? <Loader/> : props.children }
+				{ loading ? <Loader /> : props.children }
 			</div>
 			{ null !== data ? (
 				<Footer footerData={ { data, loading, errorMsg } }/>

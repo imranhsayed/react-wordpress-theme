@@ -49,7 +49,7 @@ const Page = ( props ) => {
 				<>
 					<section className="page-content">
 						{ data.title.rendered ? (
-							<h2>{ data.title.rendered }</h2>
+							<h2 dangerouslySetInnerHTML={{ __html: data.title.rendered }}/>
 						) : (
 							''
 						) }
