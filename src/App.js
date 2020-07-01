@@ -7,6 +7,7 @@
 /**
  * Internal Dependencies.
  */
+import React from 'react';
 import './style.scss';
 import Home from './components/pages/home';
 import { Router } from '@reach/router';

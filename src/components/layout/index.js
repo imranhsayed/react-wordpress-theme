@@ -6,9 +6,9 @@ import config from '../../../client-config';
 import Loader from './loader';
 
 const Layout = ( props ) => {
-	const [ data, setData ] = useState( null );
-	const [ loading, setLoading ] = useState( false );
-	const [ errorMsg, setError ] = useState( null );
+	const [data, setData]       = useState( null );
+	const [loading, setLoading] = useState( false );
+	const [errorMsg, setError]  = useState( null );
 
 	useEffect( () => {
 		setLoading( true );
@@ -38,15 +38,15 @@ const Layout = ( props ) => {
 	return (
 		<div>
 			{ null !== data ? (
-				<Header headerData={ { data, loading, errorMsg } } />
+				<Header headerData={ { data, loading, errorMsg } }/>
 			) : (
 				''
 			) }
 			<div className="content">
-			{ loading ? <Loader /> : props.children }
+				{ loading ? <Loader/> : props.children }
 			</div>
 			{ null !== data ? (
-				<Footer footerData={ { data, loading, errorMsg } } />
+				<Footer footerData={ { data, loading, errorMsg } }/>
 			) : (
 				''
 			) }

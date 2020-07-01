@@ -21,16 +21,20 @@ const Home = () => {
 				`${ config.siteURL }/wp-json/rae/v1/home?post_type=${ config.homePagePostType }&taxonomy=${ config.homePageTaxonomy }`
 			)
 			.then( ( response ) => {
+
+				console.warn( 'response.data', response );
+
 				// Handle success.
-				if ( 200 === response.data.status ) {
+				if ( 200 === response.status ) {
 					if ( isMountedRef.current ) {
-						setData( response.data.data );
+						console.warn( 'came', response.data );
+						setData( response.data );
 					}
 				}
 			} )
 			.catch( ( error ) => {
 				// Handle error.
-				if ( 404 === error.response.data.data.status ) {
+				if ( 404 === error.response.status ) {
 					setError( error.response.data.message );
 					setLoading( false );
 				}
@@ -43,6 +47,8 @@ const Home = () => {
 		getHomeData();
 		return () => ( isMountedRef.current = false );
 	}, [] );
+
+	console.warn( 'came', data );
 
 	return (
 		<>
