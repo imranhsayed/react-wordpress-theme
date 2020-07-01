@@ -22,12 +22,9 @@ const Home = () => {
 			)
 			.then( ( response ) => {
 
-				console.warn( 'response.data', response );
-
 				// Handle success.
 				if ( 200 === response.status ) {
 					if ( isMountedRef.current ) {
-						console.warn( 'came', response.data );
 						setData( response.data );
 					}
 				}

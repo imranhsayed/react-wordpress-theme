@@ -43,9 +43,7 @@ const LatestPosts = ( props ) => {
 									) }
 									<div className="latest-post-section__content">
 										{ post.excerpt ? (
-											<p className="latest-post-section__title">
-												{ post.excerpt }
-											</p>
+											<p className="latest-post-section__title" dangerouslySetInnerHTML={{ __html: post.excerpt }}/>
 										) : (
 											''
 										) }

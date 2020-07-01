@@ -36,8 +36,12 @@
 
 	&__title {
 		color: #333;
-		font-weight: bold;
-		font-size: 22px;
+		font-weight: normal;
+		font-size: 16px;
 		margin-bottom: 0;
+
+		@media only screen and ( min-width: $tablet ) {
+			font-size: 18px;
+		}
 	}
 }

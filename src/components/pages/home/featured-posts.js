@@ -45,7 +45,7 @@ const FeaturedPosts = ( props ) => {
 									) }
 									<div className="featured-post-section__content">
 										{ post.title ? (
-											<h3>{ post.title }</h3>
+											<h3 dangerouslySetInnerHTML={{ __html: post.title }}/>
 										) : (
 											''
 										) }
